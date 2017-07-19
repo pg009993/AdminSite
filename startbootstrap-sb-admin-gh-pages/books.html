@@ -26,7 +26,49 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+        function addRow(title,ISBN, publisher, author, price, quantity, descrip, genre)
+        {
+            if (!document.getElementsByTagName) return;
+            tabBody=document.getElementsByTagName("tbody").item(0);
+            row=document.createElement("tr");
+            cell1 = document.createElement("td");
+            cell2 = document.createElement("td");
+            cell3 = document.createElement("td");
+            cell4 = document.createElement("td");
+            cell5 = document.createElement("td");
+            cell6 = document.createElement("td");
+            cell7 = document.createElement("td");
+            cell8 = document.createElement("td");
+            textnode1=document.createTextNode(title);
+            textnode2=document.createTextNode(ISBN);
+            textnode3=document.createTextNode(publisher);
+            textnode4=document.createTextNode(author);
+            textnode5=document.createTextNode(price);
+            textnode6=document.createTextNode(quantity);
+            textnode7=document.createTextNode(descrip);
+            textnode8=document.createTextNode(genre);
+            cell1.appendChild(textnode1);
+            cell2.appendChild(textnode2);
+            cell3.appendChild(textnode3);
+            cell4.appendChild(textnode4);
+            cell5.appendChild(textnode5);
+            cell6.appendChild(textnode6);
+            cell7.appendChild(textnode7);
+            cell8.appendChild(textnode8);
+            row.appendChild(cell1);
+            row.appendChild(cell2);
+            row.appendChild(cell3);
+            row.appendChild(cell4);
+            row.appendChild(cell5);
+            row.appendChild(cell6);
+            row.appendChild(cell7);
+            row.appendChild(cell8);
+            tabBody.appendChild(row);
 
+
+        }
+    </script>
 </head>
 
 <body>
@@ -295,7 +337,8 @@
 
 </div>
 <!-- /#wrapper -->
-
+    <button onClick='addRow("title","ISBN", "pub", "auth", "price", "quantity", "descrip", "genre");return false;'>
+        Add Row</button>
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 
