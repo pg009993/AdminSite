@@ -26,49 +26,6 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript">
-        function addRow(title,ISBN, publisher, author, price, quantity, descrip, genre)
-        {
-            if (!document.getElementsByTagName) return;
-            tabBody=document.getElementsByTagName("tbody").item(0);
-            row=document.createElement("tr");
-            cell1 = document.createElement("td");
-            cell2 = document.createElement("td");
-            cell3 = document.createElement("td");
-            cell4 = document.createElement("td");
-            cell5 = document.createElement("td");
-            cell6 = document.createElement("td");
-            cell7 = document.createElement("td");
-            cell8 = document.createElement("td");
-            textnode1=document.createTextNode(title);
-            textnode2=document.createTextNode(ISBN);
-            textnode3=document.createTextNode(publisher);
-            textnode4=document.createTextNode(author);
-            textnode5=document.createTextNode(price);
-            textnode6=document.createTextNode(quantity);
-            textnode7=document.createTextNode(descrip);
-            textnode8=document.createTextNode(genre);
-            cell1.appendChild(textnode1);
-            cell2.appendChild(textnode2);
-            cell3.appendChild(textnode3);
-            cell4.appendChild(textnode4);
-            cell5.appendChild(textnode5);
-            cell6.appendChild(textnode6);
-            cell7.appendChild(textnode7);
-            cell8.appendChild(textnode8);
-            row.appendChild(cell1);
-            row.appendChild(cell2);
-            row.appendChild(cell3);
-            row.appendChild(cell4);
-            row.appendChild(cell5);
-            row.appendChild(cell6);
-            row.appendChild(cell7);
-            row.appendChild(cell8);
-            tabBody.appendChild(row);
-
-
-        }
-    </script>
 </head>
 
 <body>
@@ -142,63 +99,21 @@
                     </li>
                 </ul>
             </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                <ul class="dropdown-menu alert-dropdown">
-                    <li>
-                        <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">View All</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                    </li>
-                </ul>
-            </li>
         </ul>
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                <li>
-                    <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                </li>
                 <li class="active">
                     <a href="books.html"><i class="fa fa-fw fa-table"></i> Books</a>
                 </li>
                 <li class="active">
                     <a href="orders.html"><i class="fa fa-fw fa-table"></i> Orders</a>
+                </li>
+                 <li class="active">
+                    <a href="EODSR.html"><i class="fa fa-fw fa-table"></i> End of Day Sales Report</a>
+                </li>
+                 <li class="active">
+                    <a href="EODLI.html"><i class="fa fa-fw fa-table"></i> End of Day Low Inventory Report</a>
                 </li>
                 <li class="active">
                     <a href="users.html"><i class="fa fa-fw fa-table"></i> Users</a>
@@ -281,46 +196,15 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td>/index.html</td>
-                                <td>1265</td>
-                                <td>32.3%</td>
-                                <td>$321.33</td>
-                            </tr>
-                            <tr>
-                                <td>/about.html</td>
-                                <td>261</td>
-                                <td>33.3%</td>
-                                <td>$234.12</td>
-                            </tr>
-                            <tr>
-                                <td>/sales.html</td>
-                                <td>665</td>
-                                <td>21.3%</td>
-                                <td>$16.34</td>
-                            </tr>
-                            <tr>
-                                <td>/blog.html</td>
-                                <td>9516</td>
-                                <td>89.3%</td>
-                                <td>$1644.43</td>
-                            </tr>
-                            <tr>
-                                <td>/404.html</td>
-                                <td>23</td>
-                                <td>34.3%</td>
-                                <td>$23.52</td>
-                            </tr>
-                            <tr>
-                                <td>/services.html</td>
-                                <td>421</td>
-                                <td>60.3%</td>
-                                <td>$724.32</td>
-                            </tr>
-                            <tr>
-                                <td>/blog/post.html</td>
-                                <td>1233</td>
-                                <td>93.2%</td>
-                                <td>$126.34</td>
+                                <td>Books R Fun</td>
+                                <td>34532453</td>
+                                <td>Tom Cawl</td>
+                                <td>Books Inc</td>
+                                <td>12.43</td>
+                                <td>32</td>
+                                <td>A nice book for people to read.</td>
+                                <td>Adventure</td>
+
                             </tr>
                             </tbody>
                         </table>
@@ -337,11 +221,6 @@
 
 </div>
 <!-- /#wrapper -->
-    <button onClick='addRow("title","ISBN", "pub", "auth", "price", "quantity", "descrip", "genre");return false;'>
-        Add Row</button>
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 
